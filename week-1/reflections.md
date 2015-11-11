@@ -17,3 +17,6 @@ pwd posts the working directory. ls lists the contents of the current directory.
 
 ## 1.4 Forking and Cloning Reflection
 
+To create a repository in Github, go to the + sign in the top right of the page and click "New Repository". Choose a repository name, whether to make it public or private, and add any licenses if necessary. To fork an existing repository, click on the Fork button on the right side of the page when you are viewing a repository. You would want to fork an existing repository when you want to play around with your own version of a repo without messing around with the original. To clone the repo onto your local machine, copy the url from the right side of the repo's page under "HTTPS clone url". In your terminal, navigate to where you want the repo to go, and then type "git clone <pasted url>".
+
+So far, installing git was easy because of the computer setup assignment pre-phase0, and the video today answered the relevant questions for beginning to use Github. No struggles yet...
