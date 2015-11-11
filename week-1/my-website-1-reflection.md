@@ -1,0 +1,14 @@
+### Paste a link to your [USERNAME].github.io repository.
+  https://github.com/msosland/msosland.github.io.git
+### Explain how to create a repository on GitHub and clone the repository to your local computer to a non-technical person.
+  To create a repository on Github, go to the top right of your page once you are logged in and click on the Plus sign and then select New Repository. On the next screen, choose a repository name. Then, choose public or private based on what you will be working on. Choose a README, and especially for a public repo, add a license to set detailed open-source rights to your repository. The MIT license is one option that allows most users to do anything with the work in the repository as long as the license remains at the top.
+### Describe what open source means.
+  Open source means that the source code is made available with the software, which essentially means users can edit it as they see fit. Open source on Github means that in a public repo, anyone can copy or edit the code and interact with the originator to add changes.
+### What do you think about Open Source? Does it make you nervous or protective? Does it feel like utopia?
+  Right now it feels more like utopia because I do not have any valuable proprietary software worth protecting. And at the moment, if I ever did have some valuable software, I think I would still want to produce it in an open source manner because I have benefitted from open source information in the past. Also, I need to interact by giving and receiving feedback as much as possible and Open Source is the ultimate way to do that.
+### Assess the importance of using licenses.
+  Even within open source software, licenses are important to add disclaimers to projects. Typically, they will explicitly lay out how the work may be used and what copyright rules to follow.
+### What concepts were solidified in the challenge? Did you have any "aha" moments? What did you struggle with?
+  Repeating the adding, committing, pushing, pulling, and merging from 1.5 helped solidfy those concepts for me. One semi-"aha" realization was to buy the Sublime license after hearing about how great it is - I am a sucker for reviews. It was a little challenging discerning the differences between all the licenses as they would actually relate to my work.
+### Did you find any resources on your own that helped you better understand a topic? If so, please list it.
+  The only thing I looked up was whether it is a good idea to use my real name for my github login, and I think it is. Also, I plan on going through the whole sublime crash course at some point soon.
