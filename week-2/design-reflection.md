@@ -1,5 +1,5 @@
 Here is my sitemap:
-![sitemap](sitemap.png)
+![sitemap](/imgs/sitemap.png)
 
 ### What are the 6 Phases of Web Design?
   The six phases are:
