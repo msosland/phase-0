@@ -1,0 +1,102 @@
+/*
+What is important to know when linking an external file (like a stylesheet) to an HTML file?
+  It is important to know the relative path. In this assignment,
+  I linked my berkshire-site which was in the week-2 folder to my CSS
+  in the week 3 folder. Also, it is noteworthy that you can link an
+  html document to multiple stylesheets.
+What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+  We adjusted margins a lot to modify positioning. For example, we put
+  a margin-left on our unordered list of websites. We also used negative margins to squeeze the headers closer together at the top
+  of the page. I put in a margin-bottom for all list elements to space them out more. The text-align property was also valuable to help us
+  center elements. For the unordered list of links, we split the list
+  into two, and floated one left and one right with an inline-block
+  display.
+What CSS did you use to modify the element style (like size, color, etc.)
+  We used background-color, color, text-transform: uppercase, font-size, and font-weight: bold.
+Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one to add to your HTML?
+  We ended up using an id to hone in on one specific span; however, we
+  could have also used the nth-child method of grabbing that tag. We
+  did not include any classes because our page was pretty basic and did
+  not have much overlapping features. However, we are aware that
+  classes make up the vast majority of ways to add css to elements.
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+  The main difference was that the real site used a table for the links.
+  I think that would have made the site drastically easier to position.
+  I cannot remember why I did not use a table last week, but maybe I was under the impression it wasn't best practice to use it as often
+  as it used to be used in older versions of html. Interestingly,
+  the real site still has the unordered list inside of a table, instead of just having links inside cells.
+  It also looks like the real site specifies style inside the html
+  element tags, with the height, valign, and width of all of their
+  links inside every single <td>. That seems very inefficient!
+*/
+
+html {
+  background-color: #ffffff;
+  color: #000080;
+}
+h1 {
+  font-size: 17px;
+  text-align: center;
+  text-transform: uppercase;
+}
+h1 > span {
+  font-size: 28px;
+}
+#addy {
+  display: block;
+  font-size: 14px;
+}
+h2 {
+  font-size: 16px;
+  text-align: center;
+  margin-top: -10px;
+}
+h3 {
+  font-size: 14px;
+  text-align: center;
+  margin-top: -10px;
+}
+a {
+    color: #800080;
+}
+
+a:visited {
+    color: #ff0000;
+}
+
+ul {
+    display: inline-block;
+    margin-left: 5%;
+}
+li {
+    margin-bottom: 20px;
+
+
+}
+span {
+  font-size: 10px;
+
+}
+div:first-child {
+    float: left;
+}
+
+div:nth-child(2) {
+    float: right;
+}
+
+aside {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  border-bottom: black solid 1px;
+  border-top: black solid 1px;
+}
+aside > p {
+  margin-top: -5px;
+}
+footer {
+  padding-top: 10px;
+  border-top: black solid 1px;
+}
