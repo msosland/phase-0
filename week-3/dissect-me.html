@@ -7,15 +7,17 @@
   </head>
   <body>
     <header>
-      <a href="https://github.com/msosland">Github</a>
-      <a href="https://www.linkedin.com/in/marshallsosland">LinkedIn</a>
-      <a href="#">Twitter</a>
-      <a href="https://www.facebook.com/marshall.sosland">Facebook</a>
-      <a href="#">Quora</a>
+      <ul>
+        <li><a href="https://github.com/msosland">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/marshallsosland">LinkedIn</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="https://www.facebook.com/marshall.sosland">Facebook</a></li>
+        <li><a href="#">Quora</a></li>
+     </ul>
     </header>
 
     <main>
-      <section id="content">
+      <section class="content">
         <h1>Version Control, Git, and Github</h1>
         <h2>Phase0 1.7 Techincal Blog Entry</h2>
         <h4>November 11, 2015</h4>
@@ -44,17 +46,18 @@
       </section>
     </main>
 
-    <nav>
-      <a href="index.html">Blog Index</a>
-      <a href="#">Previous Post</a>
-      <a href="#">Next Post</a>
-    </nav>
-    <section id="comments">
-      <h6>Comments?</h6>
-    </section>
-    <div id="profile">
+
+    <aside id="profile">
+      <nav>
+        <a href="index.html">Blog Index</a>
+        <a href="#">Previous Post</a>
+        <a href="#">Next Post</a>
+      </nav>
+      <section id="comments">
+       <h6>Comments?</h6>
+      </section>
       <img src="#" alt="profile"/>
-    </div>
+    </aside>
 
     <footer>
       <a href="#">About</a>
@@ -63,4 +66,27 @@
     </footer>
 
   </body>
+<!--
+What HTML5 tags have you used in this challenge and continue to return to often? Why?
+  I tried to use as many of the non-div semantic elements as I could. So I used
+  header, footer, article, section, main, aside, and nav. I think it is very useful
+  to separate all the "extras" out, like header, footer, nav, and aside first, and
+  then I try to think about how to section the rest of the content.
+How do elements get laid out on a page? What is the order the browser uses to display elements?
+  The new semantic elements in HTML5 allow a machine or screenreader to understand
+  the hierarchy of the page much easier than when almost all sections were divs.
+  The header and footer tags separate content out that is not really in the main
+  part of the page. The aside and nav tags separate out sidebars and navigational
+  links that are not critical to the main content of the page. The main tag hones in on the important content, with the section tags helping to divide it up, and
+  the article tag specifies what is really the potentially reproduceable media
+  content from the page.
+
+What did you learn about Sublime in this challenge? Do you think you'll create more handy snippets at a later date? What about research some shortcuts that already exist?
+  Having a saved html skeleton is a very useful tool to create an html page,
+  especially one that is similar to others I have made. I think I will first clean
+  up my blog-template html page, and possibly save that as a snippet (though I
+  have also just been copying and pasting my code into new blog posts). Tab is also
+  useful in sublime to finish typing out tags. Those are the only ones I have used
+  so far but I will check out others...
+-->
 </html>
