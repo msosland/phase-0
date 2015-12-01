@@ -1,0 +1,38 @@
+header {
+  color: #8fcfe8;
+  background-color: black;
+  width: 95%;
+  margin: 10px auto 10px auto;
+}
+
+.column-1 {
+  width: 42%;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+}
+
+.column-2 {
+  width: 42%;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: Arial;
+  color: red;
+}
+
+summary {
+  background-color: #dcf7e2;
+  width: 80%;
+}
+
+footer {
+  width: 95%;
+  margin: 10px auto 10px auto;
+  clear: both;
+  background-color: #e5ff10;
+}
