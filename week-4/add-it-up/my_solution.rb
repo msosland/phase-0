@@ -44,6 +44,7 @@ end
 # Steps to solve the problem.
 
 # 5. sentence_maker initial solution
+
 def sentence_maker(words)
   sentence = ""
   words.each { |word| sentence << word.to_s + " "}
@@ -55,7 +56,5 @@ end
 # 6. sentence_maker refactored solution
 # combined third and fourth line of method
 def sentence_maker(words)
-  sentence = ""
-  words.each { |word| sentence << word.to_s + " "}
-  return sentence.capitalize.chomp(" ") << "."
+  return words.join(" ").capitalize.chomp(" ") << "."
 end
