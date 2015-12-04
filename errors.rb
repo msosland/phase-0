@@ -1,12 +1,12 @@
 # Analyze the Errors
 
 # I worked on this challenge myself.
-# I spent [#] hours on this challenge.
+# I spent 45 min on this challenge.
 
 # --- error -------------------------------------------------------
 
-# "Screw you guys " + "I'm going home." = cartmans_phrase
-# shouldbe cartmans_phrase = "Screw you guys" + "I'm going home."
+# (buggy)"Screw you guys " + "I'm going home." = cartmans_phrase
+# cartmans_phrase = "Screw you guys" + "I'm going home."
 
 # This error was analyzed in the README file.
 # --- error -------------------------------------------------------
@@ -14,7 +14,7 @@
 #def cartman_hates(thing)
  # while true
  #   puts "What's there to hate about #{thing}?"
- # (fixed) end
+ # end
 # end
 
 # This is a tricky error. The line number may throw you off.
@@ -34,7 +34,7 @@
 
 # --- error -------------------------------------------------------
 
-# fixed    x = south_park
+# south_park = 21
 
 # 1. What is the line number where the error occurs?
 #   37
