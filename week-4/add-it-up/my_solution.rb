@@ -56,5 +56,5 @@ end
 # 6. sentence_maker refactored solution
 # combined third and fourth line of method
 def sentence_maker(words)
-  return words.join(" ").capitalize.chomp(" ") << "."
+  return words.join(" ").capitalize << "."
 end
