@@ -64,13 +64,28 @@ end
 
 # 3. Reflection
 # What was your process for breaking the problem down? What different approaches did you consider?
-# I was mainly trying to figure out how to access three digits at a time from the end of the number. So i originally tried modulus-ing by 1000 to get the remainder and dividing by 1000 to slice the remainder off, and looping through that process while the quotient was greater than 1000. However, even though the test passed for most random numbers, it failed with leading zeroes, because the remainder of 1002 % 1000 is 2 and not 002. So I had to go back and modulus and divide by 10 instead of 1000 to grab each digit one at a time.
+# I was mainly trying to figure out how to access three digits at a time from the end of the number. So i originally tried
+# modulus-ing by 1000 to get the remainder and dividing by 1000 to slice the remainder off, and looping through that process while
+#  the quotient was greater than 1000. However, even though the test passed for most random numbers, it failed with leading
+#  zeroes, because the remainder of 1002 % 1000 is 2 and not 002. So I had to go back and modulus and divide by 10 instead of 1000
+#  to grab each digit one at a time.
 # Was your pseudocode effective in helping you build a successful initial solution?
-# Yes, the pseudocode helped me go through each line in my actual code. It also gave me time to think through the logic before beginning the code.
+# Yes, the pseudocode helped me go through each line in my actual code. It also gave me time to think through the logic
+# before beginning the code.
 # What new Ruby method(s) did you use when refactoring your solution? Describe your experience of using the Ruby documentation to implement it/them (any difficulties, etc.). Did it/they significantly change the way your code works? If so, how?
-# I used split, slice, <<, join, flatten, and reverse, so by number of methods it was more complicated than my initial solution. I found it much more difficult to convert my method into built-in methods than it was to just write it out with my initial solution. And actually, I think my refactored solution might be slower than my original solution based on the type conversions and methods. I tried using the time = Benchmark.measure way of measuring my two methods, and my initial is a little faster when running it one at a time..(havent figured out how to run it 10000 times yet)
+# I used split, slice, <<, join, flatten, and reverse, so by number of methods it was more complicated than my initial solution.
+# I found it much more difficult to convert my method into built-in methods than it was to just write it out with my initial solution.
+#  And actually, I think my refactored solution might be slower than my original solution based on the type conversions
+#  and methods. I tried using the time = Benchmark.measure way of measuring my two methods, and my initial is a little faster
+# when running it one at a time..(havent figured out how to run it 10000 times yet)
 # How did you initially iterate through the data structure?
-# Initially i iterated through the number by dividing the number by 1000 and modulus-ing it by 1000 to separate the digits before and after commas. However, even though my method passed the tests, which chose random numbers, my method FAILED when dealing with zeroes, because taking the remainder of 1002 % 1000 gives 2, not 002. So I had to go back and make sure the digits kept leading zeroes by modulus-ing and dividing by 10 to grab one digit at a time. I also had to make sure I reversed the first digits of the answer and reversed the entire string at the end (because I kept putting the last digit next in the string)
+# Initially i iterated through the number by dividing the number by 1000 and modulus-ing it by 1000 to separate the digits before
+# and after commas. However, even though my method passed the tests, which chose random numbers, my method FAILED when dealing
+# with zeroes, because taking the remainder of 1002 % 1000 gives 2, not 002. So I had to go back and make sure the digits kept
+# leading zeroes by modulus-ing and dividing by 10 to grab one digit at a time. I also had to make sure I reversed the first
+# digits of the answer and reversed the entire string at the end (because I kept putting the last digit next in the string)
 # Do you feel your refactored solution is more readable than your initial solution? Why?
-# I feel like my initial solution is more readable because it uses less methods. Using each_slice and each and having multiple code blocks and then a bunch of chained methods in my refactore solution seems to create a harder method to read.
-#   HOWEVER, right now all of my pseudocode is above all my actual code. I imagine that my code could possibly be made more readable if I added my pseudocode as comments through my code.
+# I feel like my initial solution is more readable because it uses less methods. Using each_slice and each and having
+# multiple code blocks and then a bunch of chained methods in my refactore solution seems to create a harder method to read.
+#   HOWEVER, right now all of my pseudocode is above all my actual code. I imagine that my code could possibly be made more
+# readable if I added my pseudocode as comments through my code.
