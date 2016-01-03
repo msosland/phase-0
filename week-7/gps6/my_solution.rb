@@ -1,6 +1,6 @@
 # Virus Predictor
 
-# I worked on this challenge with Kurt.
+# I worked on this challenge with Kurt Schlueter.
 # We spent 1.25 hours on this challenge.
 
 # EXPLANATION OF require_relative
