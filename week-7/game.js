@@ -5,14 +5,17 @@
 // Your mission description:
 // Overall mission: Create a trivia bank where the user learns facts about different countries.
 
-// Goals: Eventually, transform JS code into interactive html page where user can click on different buttons to learn about different countries.
+// Goals: Eventually, transform JS code into interactive html page where user can click on different
+// buttons to learn about different countries.
 
 // Characters: There is essentially just a user, and each user can keep track of what he/she has learned.
 
 // Objects: There will be multiple Country objects, and there will be User objects. See pseudocode for more details.
 
-// Functions: There are four functions. In the Country object, there is a function called decrement which decreases the unread property, and a function called fact which displays a fact about the country.
-//In the User object, there is a function called display countries that displays all the countries the user has been to, and a function called visit that goes a learns a fact about a country.
+// Functions: There are four functions. In the Country object, there is a function called decrement
+// which decreases the unread property, and a function called fact which displays a fact about the country.
+//In the User object, there is a function called display countries that displays all the countries the user has
+// been to, and a function called visit that goes and learns a fact about a country.
 
 
 // Pseudocode
@@ -126,54 +129,75 @@ function User() {
   }
 }
 
+//DRIVER CODE BELOW
+//calling code on just the countries
+brazil.fact();
+uae.fact();
+
 //creating myself as a user
 var marshall = new User;
-marshall.displayCountries();
-//touring the world and learning
-marshall.visit(india);
-marshall.visit(china);
 
+//calling code on myself
+marshall.displayCountries();
+marshall.visit(india);
+marshall.visit(china);
 marshall.visit(india);
 marshall.visit(india);
 marshall.visit(china);
-marshall.visit(brazil);
 marshall.visit(peru);
 marshall.visit(morocco);
 marshall.visit(colombia);
-marshall.visit(uae);
 marshall.visit(tanzania);
-
-
-
 marshall.displayCountries();
-
-
-
-// console.log(marshall.visited);
-// console.log(marshall.factsReviewed);
-
 
 // Refactored Code
 
-
-
+//I do not have any refactored code for this challenge.
+//I turned this game into an iteractive html page.
+//It can be found at http://msosland.github.io/projects/countries.html
 
 
 
 // Reflection
 // What was the most difficult part of this challenge?
-// My pseudocode is pretty bad. I see two causes - one is that I kept changing my mind about what I was going to have my objects and functions do, then I would go back and pseudocode that part, or adjust the pseudocode that I had already written.
-// That obviously defeats the purpose of pseudocode to guide code, though I still used my pseudocode to guide the majority of my original code.
-// Also, as the programs I write get more complex, I find it really hard to pseudocode the entire program beforehand because I am really not sure how the program is going to unfold. I was reacting a lot to how my program was working, then improving it, which strayed from my original pseudocode.
-// There were also several array properties I really missed from Ruby. I will reflect more about these later in the reflection.
+// My pseudocode is pretty bad. I see two causes - one is that I kept changing my mind about what I was going to have
+// my objects and functions do, then I would go back and pseudocode that part, or adjust the pseudocode that I had
+// already written.
+// That obviously defeats the purpose of pseudocode to guide code, though I still used my pseudocode to guide
+// the majority of my original code.
+// Also, as the programs I write get more complex, I find it really hard to pseudocode the entire program beforehand
+// because I am really not sure how the program is going to unfold. I was reacting a lot to how my program was working,
+//  then improving it, which strayed from my original pseudocode.
+// There were also several array properties I really missed from Ruby. I will reflect more about
+// these later in the reflection.
 
 // What did you learn about creating objects and functions that interact with one another?
-// I thought it was fairly straightforward, though I did learn that my parameters had to be variables, not strings. For example, when I called the visit method on the user, marshall.visit(india); works, and marshall.visit('india'); does not work, because I cannot call methods on the string india, only the variable/object india.
-//I also wanted to put in some exception handling to handle the user trying to visit countries not in the database, but I figured I could review that another time, and in my vision for the html page, the countries that exist would be buttons (so that a user cannot visit a country that does not exist). I was not able to simply put an if statement for a bad parameter, because in javascript a bad parameter was an undefined object and it threw an error.
+// I thought it was fairly straightforward, though I did learn that my parameters had to be variables,
+//  not strings. For example, when I called the visit method on the user, marshall.visit(india);
+//  works, and marshall.visit('india'); does not work, because I cannot call methods on the string
+//  india, only the variable/object india.
+//  In my interactive html game, I used the eval() function to turn the html textContent from a string
+//  into the name of my object.
+// //I also wanted to put in some exception handling to handle the user trying to visit countries not in the database,
+// but I figured I could review that another time, and in my vision for the html page, the countries
+// that exist would be buttons (so that a user cannot visit a country that does not exist).
+// I was not able to simply put an if statement for a bad parameter, because in javascript
+// a bad parameter was an undefined object and it threw an error.
 // Did you learn about any new built-in methods you could use in your refactored solution? If so, what were they and how do they work?
 // Well, i used .indexOf === -1 to determine whether an element was in an array.
-//I tried using !(elem in array), but I was having problems possibly because of confusion over whether I was searching for india the object, 'India' the place name, 'india' the string etc.
-// How can you access and manipulate properties of objects?
-// Dot notation and bracket notation are the ways to access properties and values of objects, and dot notation is probably more common for any property that is a valid variable name (no spaces, isnt a number, etc). So place.name or place.capital is how I accessed Country values. But I could have also used place["name"], etc.
-//I put methods inside my object contructors to create the functions I would be using to manipulate my objects. Ultimately, my program runs from the point of view of the user, and calls methods on the user, but some of those methods (like visit) call a method on the country (like fact). It is neat to be able to call place.fact() inside my user.visit() method.
-//For extra practice, I pulled some code out of the .fact and .visit methods to create two more smaller methods - the display countries method for the user and the decrement function for the Country objects.
+//I tried using !(elem in array), but I was having problems possibly because of confusion over whether
+// I was searching for india the object, 'India' the place name, 'india' the string etc.
+// I used many new methods when I coded my interactive html page ( http://msosland.github.io/projects/countries.html )
+// Most of that was from the DOM and Events chapters in Duckett's JS and Jquery Book.
+// I used eval(), .textContent, getElementbyId, target, event, addEventListener, and more.
+// // How can you access and manipulate properties of objects?
+// // Dot notation and bracket notation are the ways to access properties and values of objects, and dot notation is
+//  probably more common for any property that is a valid variable name (no spaces, isnt a number, etc).
+//  So place.name or place.capital is how I accessed Country values. But I could have also used place["name"], etc.
+// //I put methods inside my object contructors to create the functions I would be using to manipulate my objects.
+// Ultimately, my program runs from the point of view of the user, and calls methods on the user, but some of those
+//  methods (like visit) call a method on the country (like fact). It is neat to be able to call place.fact() inside
+//  my user.visit() method.
+// //For extra practice, I pulled some code out of the .fact and .visit methods to create two more smaller methods
+//  - the display countries method for the user and the decrement function for the Country objects.
+//  In my online game, there is no user constructor, and the buttons just call methods on the country objects.
