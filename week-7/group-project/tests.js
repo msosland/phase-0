@@ -1,6 +1,45 @@
 
 // Add the finished solution here when you receive it.
+//
 // __________________________________________
+
+function sum(numbersArray) {
+  var sum = 0;
+  for (var index in numbersArray) {
+    sum += numbersArray[index];
+  }
+  return sum;
+}
+
+// ###############
+//
+// Sum User Story:
+//
+// As a user, I want to be able to calculate the sum of a group of numbers.
+//
+// ###############
+
+function mean(numbersArray) {
+  return (sum(numbersArray) / numbersArray.length);
+}
+
+// ###############
+//
+// Mean User Story:
+//
+// As a user, I want to be able to calculate the mean value of a group of numbers.
+//
+// ###############
+
+function median(numbersArray) {
+  var sortedArray = numbersArray.sort(function(a, b) { return a - b;} );
+  var middleIndex = Math.floor((sortedArray.length - 1) / 2);
+  if (sortedArray.length % 2 != 0) {
+    return (sortedArray[middleIndex]);
+  }  else {
+    return ((sortedArray[middleIndex] + sortedArray[middleIndex + 1]) / 2);
+  }
+}
 // Tests:  Do not alter code below this line.
 
 
