@@ -1,7 +1,10 @@
 # I worked on this challenge by myself
+
 # This challenge took me
   # is_fibonacci? 15 minutes
   # super_fizzbuzz 15 minutes
+  # numbers to english 15 minutes
+  # reverse_words 30 minutes
 
 # # Pseudocode for is_fibonacci?
 # SET array equal to the first 3 numbers of the fibonacci sequence.
@@ -41,7 +44,7 @@ end
 # END loop
 # RETURN array
 
-# Initial Solution
+# Initial Solution for super fizzbuzz
 
 def super_fizzbuzz(array)
   array.each_index do |x|
@@ -61,5 +64,94 @@ end
 # Refactored Solution
 #Nothing to refactor
 
-# Reflection
+# Reflection for super fizzbuzz
 # I chose to use each_index so that I could change the indices, instead of changing the numbers.
+
+# Pseudocode for numbers to english words
+# CREATE tens array with values null, ten, twenty, thirty, etc.. ninety
+#CREATE ones array with values null, one, two, three, etc.. nine
+# #IF num < 10
+#   RETURN index  from second array
+# #IF num >= 10
+#   convert num to string
+#   split string into 2 digits
+#   turn two strings back to integers
+#   RETURN index from tens array and index from ones array
+
+
+
+
+# Initial Solution for nums to words
+def in_words(num)
+  tens = ['zero', 'ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
+  ones = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+  if num < 10
+    return ones[num]
+  else
+    num_arr = num.to_s.split(//)
+    if num_arr[1] != "0"
+      return tens[num_arr[0].to_i] + " " + ones[num_arr[1].to_i]
+    else
+      return tens[num_arr[0].to_i]
+    end
+  end
+end
+
+# p in_words(4)
+# p in_words(27)
+# p in_words(92)
+# p in_words(80)
+
+
+
+# Refactored Solution
+#Apparently there is a gem for this!
+
+# Reflection for nums to words
+# For up to 1000, you could pull the ones array index, add "hundred" then the tens index, then the ones index again. Would need checks to see if the tens or ones digit is 0.
+#I added 'zero' at the front of each array so that the 1 index would correspond to the 1 number.
+
+# Reverse Words
+
+# Pseudocode for reverse words
+# input a string
+
+# SPLIT the string into words separated by spaces and punctuation
+# SAVE the words into an array
+# ITERATE through array reversing each string
+# JOIN the elements with spaces
+
+
+
+# Initial Solution for reverse words
+def reverse_words(string)
+  array = string.split(" ")
+  array.map! do |elem|
+    if elem[-1] == "." || elem[-1] == "," || elem[-1] =="?" || elem[-1] == "!"
+      elem = elem[0..-2].reverse + elem[-1]
+    else
+      elem = elem.reverse
+    end
+  end
+  array.join(" ")
+end
+
+
+# Refactored Solution
+#Use regular expressions to deal with all punctuation
+def reverse_words(string)
+  array = string.split(" ")
+  array.map! do |elem|
+    if /[^A-Za-z0-9]/.match(elem[-1])
+      elem = elem[0..-2].reverse + elem[-1]
+    else
+      elem = elem.reverse
+    end
+  end
+  array.join(" ")
+end
+
+
+# Reflection for reverse words
+# I added all the elem[-1] checks initially to try and keep the punctuation in place at the end of reversed words. I used regexp in the refactored version to check the last char of each word.
+
