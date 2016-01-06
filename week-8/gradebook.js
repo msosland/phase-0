@@ -1,7 +1,7 @@
 /*
 Gradebook from Names and Scores
 I worked on this challenge with Gary Wong
-This challenge took me [#] hours.
+This challenge took me 1 hours.
 
 You will work with the following two variables.  The first, students, holds the names of four students.
 The second, scores, holds groups of test scores.  The relative positions of elements within the two
@@ -20,26 +20,79 @@ var scores = [ [80, 70, 70, 100],
 
 // __________________________________________
 // Write your code below.
+var gradebook = {};
 
+for (var student in students){
+  gradebook[students[student]] = {
+    testScores: scores[student]
+  };
+}
 
+// console.log(gradebook);
 
+gradebook.addScore = function(name, score) {
+   gradebook[name]['testScores'].push(score);
+}
 
+gradebook.getAverage = function(){}
 
+function average(array) {
+  var sum = 0;
+  for (var num in array) {
+    sum += array[num];
+  }
+  return sum/array.length;
+}
 
+gradebook.getAverage = function(name){
+  return average(gradebook[name]['testScores']);
+}
 
+// console.log(gradebook.getAverage("William"));
+// console.log(average([80, 70, 70, 100]));
+// console.log(gradebook);
 
 // __________________________________________
 // Refactored Solution
+var gradebook = {};
 
+for (var student in students){
+  gradebook[students[student]] = {testScores: scores[student]};
+}
 
+// console.log(gradebook);
 
+gradebook.addScore = function(name, score) {
+   gradebook[name]['testScores'].push(score);
+}
 
+function average(array) {
+  var sum = 0;
+  for (var i = 0, j = array.length; i < j; i++) {sum += array[i];}
+  return sum/array.length;
+}
 
+gradebook.getAverage = function(name){
+  return average(gradebook[name]['testScores']);
+}
 
 
 
 // __________________________________________
 // Reflect
+// What did you learn about adding functions to objects?
+// I learned that you can just add an empty function to an object by using object.functionName = function() {},
+//  and go back and fill out the function later.
+
+// How did you iterate over nested arrays in JavaScript?
+// We used students[student] as a key, so gradebook[students[student]] = {etc}. And since (for num in array) produces
+//  the indices 0, 1, 2, 3 etc as num, we could reuse the index in the line
+//  gradebook[students[student]] = {testScores: scores[student]}.
+// We used for.. in loops in the initial solution, though I think using a normal loop -
+// for (var i = 0; i < etc; i++) is better practice in many situations in JavaScript.
+
+// Were there any new methods you were able to incorporate? If so, what were they and how did they work?
+// We did not use any new methods. The syntax was pretty simple. We used push to add a value, and for/for..in loops.
 
 
 
