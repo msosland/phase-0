@@ -1,7 +1,7 @@
 # Drawer Debugger
 
 # I worked on this challenge by myself
-# I spent [#] hours on this challenge.
+# I spent 30 minutes on this challenge.
 
 # Original Code
 
